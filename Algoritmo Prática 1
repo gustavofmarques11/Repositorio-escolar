@@ -1,0 +1,88 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro A, B, soma, menor, maior
+        inteiro vet_par[50]
+        real media
+
+        A = 1
+        B = 0
+        soma = 0
+
+        enquanto (A <= 100)
+        {
+            escreva(A, "\n")
+
+            se (A % 2 == 0)
+            {
+                vet_par[B] = A
+                B++
+            }
+
+            A++
+        }
+
+        escreva("\nNumeros pares:\n")
+
+        A = 0
+
+        enquanto (A < 50)
+        {
+            escreva(vet_par[A], " ")
+            A++
+        }
+
+        escreva("\nNumeros pares do maior ao menor:\n")
+
+        B = 49
+
+        enquanto (B >= 0)
+        {
+            escreva(vet_par[B], "\n")
+            B--
+        }
+
+        B = 0
+
+        enquanto (B < 50)
+        {
+            soma = soma + vet_par[B]
+            B++
+        }
+
+        media = soma / 50.0
+
+        escreva("\nA media dos valores e: ", media)
+
+        menor = vet_par[0]
+        B = 1
+
+        enquanto (B < 50)
+        {
+            se (vet_par[B] < menor)
+            {
+                menor = vet_par[B]
+            }
+
+            B++
+        }
+
+        escreva("\nO menor numero e: ", menor)
+
+        maior = vet_par[0]
+        B = 1
+
+        enquanto (B < 50)
+        {
+            se (vet_par[B] > maior)
+            {
+                maior = vet_par[B]
+            }
+
+            B++
+        }
+
+        escreva("\nO maior numero e: ", maior)
+    }
+}
